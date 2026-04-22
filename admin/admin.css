@@ -1,0 +1,52 @@
+:root {
+  --paper: #f2f0ef;
+  --stone: #bbbdbc;
+  --sea: #245f73;
+  --earth: #733e24;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: #1f2937;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.admin-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+h1 {
+  margin-bottom: 8px;
+  color: var(--sea);
+}
+
+.admin-grid {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.admin-grid article {
+  background: white;
+  border: 1px solid var(--stone);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+#listingCount,
+#leadCount {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--earth);
+}
+
+.admin-note {
+  margin-top: 16px;
+  color: var(--sea);
+  font-weight: 600;
+}
