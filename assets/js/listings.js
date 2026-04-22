@@ -1,0 +1,76 @@
+export const baseListings = [
+  {
+    id: 101,
+    title: "Deniz Manzarali Akilli Daire",
+    city: "Istanbul",
+    district: "Kadikoy",
+    type: "Daire",
+    price: 6250000,
+    area: 145,
+    rooms: "3+1",
+    image:
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80",
+    featured: true,
+  },
+  {
+    id: 102,
+    title: "Bahceli Modern Villa",
+    city: "Izmir",
+    district: "Urla",
+    type: "Villa",
+    price: 12800000,
+    area: 310,
+    rooms: "5+1",
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
+    featured: true,
+  },
+  {
+    id: 103,
+    title: "Merkezi Konumda Premium Ofis",
+    city: "Ankara",
+    district: "Cankaya",
+    type: "Ofis",
+    price: 4850000,
+    area: 180,
+    rooms: "4 Oda",
+    image:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80",
+  },
+  {
+    id: 104,
+    title: "Genis Terasli Aile Dairesi",
+    city: "Bursa",
+    district: "Nilufer",
+    type: "Daire",
+    price: 3780000,
+    area: 162,
+    rooms: "4+1",
+    image:
+      "https://images.unsplash.com/photo-1592595896551-12b371d546d5?auto=format&fit=crop&w=1400&q=80",
+  },
+  {
+    id: 105,
+    title: "Yatirimlik Plaza Ofisi",
+    city: "Istanbul",
+    district: "Maslak",
+    type: "Ofis",
+    price: 7120000,
+    area: 205,
+    rooms: "6 Oda",
+    image:
+      "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1400&q=80",
+  },
+  {
+    id: 106,
+    title: "Havuzlu Site Icinde Villa",
+    city: "Antalya",
+    district: "Dosemealti",
+    type: "Villa",
+    price: 15600000,
+    area: 355,
+    rooms: "6+1",
+    image:
+      "https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?auto=format&fit=crop&w=1400&q=80",
+  },
+];
