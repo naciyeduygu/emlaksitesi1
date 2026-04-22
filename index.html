@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MaviKapi Emlak ile satilik ve kiralik ilanlari filtreleyin, favorileyin ve odeme planinizi hesaplayin."
+    />
+    <title>MaviKapi Emlak | Dinamik Emlak Platformu</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="hero" id="anasayfa">
+      <div class="hero-overlay"></div>
+      <nav class="nav container">
+        <a href="#anasayfa" class="brand">MaviKapi Emlak</a>
+        <div class="nav-links">
+          <a href="#ilanlar">Ilanlar</a>
+          <a href="#hesapla">Odeme Hesapla</a>
+          <a href="#iletisim">Iletisim</a>
+        </div>
+        <button class="favorite-badge" id="favoriteBadge" aria-label="Favori ilanlar">Favori 0</button>
+      </nav>
+
+      <section class="hero-content container">
+        <p class="hero-brand">MaviKapi Emlak</p>
+        <h1>Dogru semtte, dogru metrekarede yeni bir baslangic yapin.</h1>
+        <p>
+          Dogrulanmis ilanlar, guclu filtreleme ve uzman danisman destegi ile satin alma surecini tek panelde yonetin.
+        </p>
+        <div class="hero-actions">
+          <a href="#ilanlar" class="btn btn-primary">Ilanlari Incele</a>
+          <a href="#iletisim" class="btn btn-secondary">Danismana Ulas</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="ilanlar" class="container section">
+        <h2>Canli Ilan Akisi</h2>
+        <p class="section-copy">Filtreleri degistirdiginizde liste aninda guncellenir.</p>
+
+        <div class="filters" aria-label="Ilan filtreleri">
+          <input id="searchInput" type="text" placeholder="Sehir, ilce veya ilan ara" />
+          <select id="typeSelect">
+            <option value="Tum Tipler">Tum Tipler</option>
+            <option value="Daire">Daire</option>
+            <option value="Villa">Villa</option>
+            <option value="Ofis">Ofis</option>
+          </select>
+          <label class="range-wrap">
+            <span id="maxPriceText">Maksimum fiyat: 20.000.000 TL</span>
+            <input id="priceRange" type="range" min="2000000" max="20000000" step="250000" value="20000000" />
+          </label>
+          <div class="result-box">
+            <strong id="resultCount">0</strong>
+            <span>uygun ilan</span>
+          </div>
+        </div>
+
+        <div id="listingGrid" class="listing-grid"></div>
+      </section>
+
+      <section id="hesapla" class="section calc-section">
+        <div class="container calc-layout">
+          <div>
+            <h2>Odeme Plani Hesaplayici</h2>
+            <p class="section-copy">Aylik geliriniz ve pesinatiniz ile erisebileceginiz fiyat araligini hizla gorun.</p>
+          </div>
+          <form id="calcForm" class="calc-form">
+            <label>
+              Aylik gelir (TL)
+              <input id="monthlyIncome" type="number" min="0" value="120000" />
+            </label>
+            <label>
+              Pesinat (TL)
+              <input id="downPayment" type="number" min="0" value="1500000" />
+            </label>
+            <label>
+              Vade (yil)
+              <input id="termYears" type="number" min="1" max="30" value="10" />
+            </label>
+            <button type="submit" class="btn btn-primary">Hesapla</button>
+          </form>
+          <div class="calc-result" id="calcOutput">
+            Yaklasik erisilebilir fiyat limiti hesaplanacak.
+          </div>
+        </div>
+      </section>
+
+      <section id="iletisim" class="container section">
+        <h2>Hizli Iletisim</h2>
+        <p class="section-copy">Talebinizi iletin, 15 dakika icinde sizi arayalim.</p>
+        <form id="contactForm" class="contact-form">
+          <input type="text" name="fullName" placeholder="Ad Soyad" required />
+          <input type="tel" name="phone" placeholder="Telefon" required />
+          <select name="interest" required>
+            <option value="">Ilgi alani secin</option>
+            <option value="Satilik">Satilik</option>
+            <option value="Kiralik">Kiralik</option>
+            <option value="Yatirim Danismanligi">Yatirim Danismanligi</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Talep Gonder</button>
+        </form>
+        <p id="contactMessage" class="contact-message" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <div id="detailModal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button id="modalClose" class="modal-close" aria-label="Kapat">X</button>
+        <img id="modalImage" src="" alt="Ilan gorseli" />
+        <h3 id="modalTitle"></h3>
+        <p id="modalMeta"></p>
+        <p id="modalPrice"></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <strong>MaviKapi Emlak</strong>
+        <span>Yatirim odakli profesyonel gayrimenkul platformu</span>
+      </div>
+    </footer>
+
+    <script type="module" src="./assets/js/app.js"></script>
+  </body>
+</html>
